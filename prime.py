@@ -14,7 +14,12 @@ def test_non_integer_raises_ValueError():
 def test_1_Returns_Empty_List():
     """Step 2: Assert that the number generates an Empty List[]"""
     assert generate_prime_factors(1) == []
-
 def generate_prime_factors(n):
     if not isinstance(n, int):
         raise ValueError('Input must be an integer')
+    factors = []
+    if n >1:
+        while n % 2 == 0:
+            factors.append(2)
+            n //= 2
+    return factors
