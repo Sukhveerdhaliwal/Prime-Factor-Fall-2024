@@ -21,6 +21,11 @@ def test_3_Returns_list_with_3():
 def test_4_Returns_list_with_2_2():
     """Step 5: Assert that the number 4 generates a list with [2, 2]"""
     assert generate_prime_factors(4) == [2, 2]
+
+def test_6_Returns_list_with_2_3():
+    """Step 6: Assert that the number 6 generates a list with [2, 3]"""
+    assert generate_prime_factors(6) == [2, 3]
+
 def generate_prime_factors(n):
     if not isinstance(n, int):
         raise ValueError('Input must be an integer')
